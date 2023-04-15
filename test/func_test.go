@@ -83,3 +83,24 @@ func TestFlag(t *testing.T) {
 		t.Log("Test PASSED.")
 	}
 }
+
+func TestColorFlag(t *testing.T) {
+	flag := "--color=chartreuse"
+	expected := "chartreuse"
+	result := ColorFlag(flag)
+	if result == expected {
+		t.Log("Test PASSED.")
+	} else {
+		t.Error("Test FAILED.")
+	}
+}
+
+func TestToColor(t *testing.T) {
+	s := "Ab"
+	r := 'b'
+	if ToColor(s, r) {
+		t.Log("Test PASSED.")
+	} else {
+		t.Error("Test FAILED.")
+	}
+}
