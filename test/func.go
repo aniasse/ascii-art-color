@@ -41,3 +41,29 @@ func Flag(s string) bool {
 		return false
 	}
 }
+
+func ColorFlag(S string) string {
+	var color string
+	var j int
+	for i := 0; i < len(S); i++ {
+		if S[i] != '=' {
+			j++
+		} else {
+			break
+		}
+	}
+	for k := j + 1; k < len(S); k++ {
+		color += string(S[k])
+	}
+	return color
+}
+
+func ToColor(s string, r rune) bool {
+	tab := []rune(s)
+	for i := 0; i < len(tab); i++ {
+		if tab[i] == r {
+			return true
+		}
+	}
+	return false
+}
