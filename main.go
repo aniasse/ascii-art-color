@@ -16,6 +16,6 @@ func main() {
 	} else if len(os.Args) == 4 && Func.Flag(os.Args[1]) {
 		Func.AsciiTobeColored(os.Args[1], os.Args[3])
 	} else {
-		fmt.Println("Error:\nUsage: go run . [OPTION] [STRING]\n\nEX: go run . --color=<color> <letters to be colored> something ")
+		fmt.Println("Usage: go run . [OPTION] [STRING]\n\nEX: go run . --color=<color> <letters to be colored> something ")
 	}
 }
