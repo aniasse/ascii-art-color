@@ -1,9 +1,13 @@
-package main
+package ascii
 
 import (
 	"fmt"
 	"os"
 )
+
+func Banner(s string) string {
+	return "./file/" + s + ".txt"
+}
 
 func Flag(s string) bool {
 	tab := []rune(s)

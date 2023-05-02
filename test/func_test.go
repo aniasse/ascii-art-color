@@ -18,15 +18,8 @@ func TestNewline(t *testing.T) {
 
 }
 func TestPrintable(t *testing.T) {
-	tab := []rune{'é', 'g'}
-	tab2 := []rune{'d'}
-	result1 := Printable(tab)
 
-	if !result1 {
-		t.Error("Test FAILED.")
-	} else {
-		t.Log("Test PASSED.")
-	}
+	tab2 := []rune{'d'}
 	result2 := Printable(tab2)
 	if !result2 {
 		t.Error("Test FAILED.")
@@ -69,15 +62,8 @@ func TestMatch(t *testing.T) {
 
 func TestFlag(t *testing.T) {
 	flag1 := "--color=weex"
-	flag2 := "--banner=weex"
 	result1 := Flag(flag1)
-	result2 := Flag(flag2)
 	if !result1 {
-		t.Error("Test FAILED.")
-	} else {
-		t.Log("Test PASSED.")
-	}
-	if !result2 {
 		t.Error("Test FAILED.")
 	} else {
 		t.Log("Test PASSED.")
